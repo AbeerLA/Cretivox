@@ -1,0 +1,142 @@
+.heroContainer {
+    position: relative;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.heroCard {
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem;
+    max-width: 1000px;
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .heroCard {
+        flex-direction: row;
+    }
+}
+
+.heroImage {
+    width: 280px;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 60% 40% 50% 30% / 50% 40% 60% 40%;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.heroImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heroText {
+    text-align: center;
+    font-family: monospace;
+}
+
+@media (min-width: 768px) {
+    .heroText {
+        text-align: left;
+    }
+}
+
+.heroTitle {
+    font-family: monospace;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1f2937;
+    border-bottom: 4px solid #6e6e6e6e;
+    display: inline-block;
+    padding-bottom: 0.2rem;
+}
+
+@media (min-width: 768px) {
+    .heroTitle {
+        font-size: 3rem;
+    }
+}
+
+.cursor {
+    color: #6e6e6e6e;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.scrollIndicator {
+    position: absolute;
+    bottom: 20px;
+    color: #a3a3a3;
+    text-align: center;
+    font-size: 0.875rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+.viewButton {
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: #000000;
+    color: #ffffff;
+    border: black;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.viewButton:hover {
+    background-color: #333;
+}
+
+/* ✅ Responsive tweaks for small screens */
+@media (max-width: 767px) {
+    .heroImage {
+        width: 240px;
+        height: 280px;
+    }
+
+    .heroTitle {
+        font-size: 2.2rem;
+    }
+
+    .heroText p {
+        font-size: 0.95rem;
+    }
+
+    .viewButton {
+        width: 100%;
+        text-align: center;
+    }
+}

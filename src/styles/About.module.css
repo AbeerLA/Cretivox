@@ -1,0 +1,105 @@
+.aboutSection {
+    background-color: #fafafa;
+    padding: 6rem 2rem;
+    display: flex;
+    justify-content: center;
+    font-family: 'Courier New', monospace;
+}
+
+.aboutWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* 🖥️ Desktop: صورة ونص جنب بعض */
+@media (min-width: 768px) {
+    .aboutWrapper {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .factsBox {
+        text-align: left;
+    }
+
+    .factsBox ul {
+        margin: 0;
+    }
+
+    .factsBox li {
+        justify-content: flex-start;
+    }
+}
+
+.imageBox {
+    flex: 1;
+    max-width: 400px;
+}
+
+.imageBox img {
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+    border-radius: 2rem;
+}
+
+.imageBox img:hover {
+    transform: scale(1.03);
+    filter: grayscale(30%);
+}
+
+.factsBox {
+    flex: 2;
+    color: #222;
+    max-width: 600px;
+    text-align: center;
+}
+
+.factsBox h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #111;
+    border-bottom: 2px solid #000;
+    padding-bottom: 0.5rem;
+}
+
+.factsBox ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.factsBox li {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    justify-content: center;
+    color: #2c2c2c;
+    transition: color 0.2s ease;
+}
+
+.factsBox li:hover {
+    color: #6b21a8;
+}
+
+/* 📱 Mobile specific tweaks */
+@media (max-width: 767px) {
+    .factsBox {
+        text-align: center;
+    }
+
+    .factsBox li {
+        justify-content: center;
+    }
+}
